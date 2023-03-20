@@ -1,0 +1,19 @@
+DomoTicz_Readme
+
+##### NodeControls #####
+NodeConstrols is an easy-way to control an node from command like pattern <cmd,action,value>
+with <cmd:size(6),action:size(6),value:size(18)> 
+because this library have a fixed payload to 32 so (payload = (cmd+action+(cmd+action+6))) = (6+7+18) = 31 + '\n' = 32 => payload
+Avialable Command : 
+    ## EEPROM
+        ******************WARNING******************
+        **Warning Character Limited to 15**
+        **Warning Node 0 can't be set by UART**
+        **Node 0 is compilation reserved**
+        **Is the server ID it's can't be change**
+        ******************WARNING******************
+        <node,name> #get the node Name
+        <node,name,MyNewName> #update the node Name 
+        <node,id,1-254> #update the node id valid id 1-254
+        <node,reset> #reset to factory_data must be sended 2Time
+        <node,restart> #restart the board
